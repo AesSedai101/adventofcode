@@ -1,6 +1,6 @@
 import java.io.File
 
-val file = File("input/day3.txt")
+val file = File("../input/day3.txt")
 
 val fabric = HashMap<Pair<Int, Int>, Int>()
 
