@@ -1,7 +1,7 @@
 import java.io.File
 
 
-val inputLines = File("../input/day12.txt").readLines()
+val inputLines = File("input/day12.txt").readLines()
 
 var plantMap = mutableMapOf<Int, Boolean>()
 plantMap.putAll(inputLines[0].replace("initial state:", "").trim()

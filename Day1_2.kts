@@ -1,7 +1,7 @@
 import java.io.File
 import java.io.InputStream
 
-val file = File("../input/day1.txt")
+val file = File("input/day1.txt")
 
 val seen = HashSet<Int>()
 var done = false

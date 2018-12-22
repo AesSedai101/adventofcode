@@ -1,7 +1,7 @@
 import java.io.File
 
 data class Coords (val x: Int, val y: Int)
-val file = File("../input/day6.txt")
+val file = File("input/day6.txt")
 
 val points : MutableList<Coords>  = mutableListOf()
 

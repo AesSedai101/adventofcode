@@ -2,7 +2,7 @@ import java.io.File
 
 data class SleepData(var minutesAsleep: Int = 0, val minuteMap : HashMap<Int, Int> = HashMap())
 
-val file = File("../input/day4.txt")
+val file = File("input/day4.txt")
 val input = file.readLines().sorted()
 
 val sleepMap = HashMap<String, SleepData>()

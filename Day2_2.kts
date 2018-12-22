@@ -1,7 +1,7 @@
 import java.io.File
 import kotlin.streams.toList
 
-val file: File = File("../input/day2.txt")
+val file: File = File("input/day2.txt")
 
 val ids = file.inputStream().bufferedReader().lines().toList()
 

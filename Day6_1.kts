@@ -3,7 +3,7 @@ import java.io.File
 data class Coords (val x: Int, val y: Int, val closest: Pair<Int, Int>)
 data class CoordsArea (val coords: Pair<Int, Int>, val areaSize: Int)
 
-val file = File("../input/day6.txt")
+val file = File("input/day6.txt")
 
 val points : MutableList<Coords>  = mutableListOf()
 

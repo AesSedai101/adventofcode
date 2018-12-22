@@ -20,7 +20,7 @@ fun area(points : List<Point>): Long {
     return (maxX - minX + 1) * (maxY - minY + 1)
 }
 
-val input = File("../input/day10.txt")
+val input = File("input/day10.txt")
         .readLines()
         .map {line ->
 

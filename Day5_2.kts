@@ -1,6 +1,6 @@
 import java.io.File
 
-val file = File("../input/day5.txt")
+val file = File("input/day5.txt")
 val input = file.readLines().first()
 
 val units = input.toLowerCase().toCharArray().distinct()

@@ -14,7 +14,7 @@ while(steps.size > 0 || workers.filter { it.isAvailable() }.size != workers.size
     // get all the available steps
     val availableSteps = steps.filter { it.predecessors.isEmpty() }.sortedBy { it.name }
     availableSteps.forEach { step ->
-        // get the first available worker, if there is one
+        // get the solutionList available worker, if there is one
         val worker = workers.filter { it.isAvailable() }.firstOrNull()
         if (worker != null) {
             // assign the step to the worker
@@ -72,7 +72,7 @@ data class Step(val name: String, val predecessors : MutableList<String>  = muta
 }
 
 fun readSteps() : MutableList<Step> {
-    val file = File("../input/day7.txt")
+    val file = File("input/day7.txt")
 
     val steps = mutableListOf<Step>()
 

@@ -1,16 +1,14 @@
 import java.io.File
-import java.util.stream.Stream
 
 data class TreeNode(val children: List<TreeNode>, val metaData: List<Int> )
 
-val input = File("../input/day8.txt").bufferedReader()
+val input = File("input/day8.txt").bufferedReader()
         .readLine()
         .split(" ")
         .map { it.toInt() }
 
 val tree = buildTree(input).first
-
-println(sumMetaData(tree))
+println(value(tree))
 
 fun buildTree(inputList: List<Int>): Pair<TreeNode, List<Int>> {
     var input = inputList.toMutableList()
@@ -31,6 +29,14 @@ fun buildTree(inputList: List<Int>): Pair<TreeNode, List<Int>> {
     return Pair(TreeNode(children, metaData), input)
 }
 
-fun sumMetaData(input: TreeNode): Int {
-    return input.metaData.sum() + input.children.map { sumMetaData(it) }.sum()
+fun value(input: TreeNode): Int {
+    return if (input.children.isEmpty()) {
+        input.metaData.sum()
+    } else {
+        input.metaData.map{ idx ->
+            input.children.getOrNull(idx-1)
+        }.map {
+            if (it == null) 0 else value(it)
+        }.sum()
+    }
 }

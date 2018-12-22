@@ -2,7 +2,7 @@ import java.io.File
 
 data class Step(val name: String, val predecessors : MutableList<String>  = mutableListOf())
 
-val file = File("../input/day7.txt")
+val file = File("input/day7.txt")
 
 val steps = mutableListOf<Step>()
 
